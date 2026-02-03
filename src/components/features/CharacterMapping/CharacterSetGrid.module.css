@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.count {
+  font-size: var(--font-size-small);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 3px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-default);
+  transition: all var(--transition-fast);
+}
+
+.assigned {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--color-success);
+}
+
+.missing {
+  background: var(--bg-input);
+  color: var(--text-muted);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-small);
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.assigned {
+  background: var(--color-success);
+}
+
+.dot.missing {
+  background: var(--text-muted);
+}

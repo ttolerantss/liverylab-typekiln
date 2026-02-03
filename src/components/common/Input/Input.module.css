@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-tertiary);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-default);
+  border: 1px solid var(--border-input);
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--text-faint);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hasError .input {
+  border-color: var(--color-error);
+}
+
+.hasIcon.iconLeft {
+  padding-left: 40px;
+}
+
+.hasIcon.iconRight {
+  padding-right: 40px;
+}
+
+.icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.icon.iconLeft {
+  left: 0;
+}
+
+.icon.iconRight {
+  right: 0;
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.error {
+  font-size: var(--font-size-small);
+  color: var(--color-error);
+}
+
+.hint {
+  font-size: var(--font-size-small);
+  color: var(--text-muted);
+}

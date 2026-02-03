@@ -1,0 +1,96 @@
+.container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  z-index: var(--z-notification);
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-toast);
+  pointer-events: auto;
+  animation: slideIn var(--transition-normal);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.exiting {
+  animation: slideOut var(--transition-fast) forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success .icon {
+  color: var(--color-success);
+}
+
+.error .icon {
+  color: var(--color-error);
+}
+
+.warning .icon {
+  color: var(--color-warning);
+}
+
+.info .icon {
+  color: var(--color-accent);
+}
+
+.message {
+  flex: 1;
+  font-size: var(--font-size-body);
+  color: var(--text-primary);
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-default);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.closeButton:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}

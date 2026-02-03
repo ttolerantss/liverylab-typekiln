@@ -1,0 +1,90 @@
+/* Design System Variables - LiveryLab Dark Theme */
+
+:root {
+  /* Backgrounds */
+  --bg-deep: #0f0f10;
+  --bg-primary: #1a1a1a;
+  --bg-sidebar: #151515;
+  --bg-elevated: #222222;
+  --bg-input: #2a2a2a;
+  --bg-hover: #333333;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #aaaaaa;
+  --text-muted: #888888;
+  --text-disabled: #666666;
+  --text-faint: #555555;
+
+  /* Brand Colors */
+  --color-primary: #1868da;
+  --color-primary-hover: #2878ea;
+  --color-accent: #4a9eff;
+  --color-update: #3b82f6;
+
+  /* Borders */
+  --border-default: #333333;
+  --border-subtle: #2a2a2a;
+  --border-input: #444444;
+  --border-hover: #555555;
+
+  /* Semantic Colors */
+  --color-success: #4caf50;
+  --color-success-alt: #28c840;
+  --color-warning: #febc2e;
+  --color-error: #e74c3c;
+  --color-error-alt: #ff5f57;
+  --color-warning-bg: rgba(255, 200, 50, 0.08);
+  --color-warning-border: rgba(255, 200, 50, 0.2);
+  --color-warning-text: #b89a3a;
+
+  /* Typography */
+  --font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --font-size-title: 16px;
+  --font-size-body: 13px;
+  --font-size-label: 12px;
+  --font-size-small: 11px;
+  --font-size-micro: 10px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-default: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  /* Shadows */
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-modal-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-toast: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  /* Transitions */
+  --transition-fast: 0.15s;
+  --transition-normal: 0.2s;
+  --transition-slow: 0.3s;
+
+  /* Z-Index Scale */
+  --z-base: 100;
+  --z-dropdown: 1000;
+  --z-titlebar: 10000;
+  --z-notification: 10000;
+  --z-modal: 15000;
+  --z-error: 20000;
+
+  /* Overlay */
+  --overlay-modal: rgba(0, 0, 0, 0.7);
+  --overlay-help: rgba(0, 0, 0, 0.75);
+}
