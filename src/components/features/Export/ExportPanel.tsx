@@ -79,6 +79,7 @@ export function ExportPanel() {
                 checked={formats.includes('ttf')}
                 onChange={() => toggleFormat('ttf')}
               />
+              <span className={styles.toggleSwitch} />
               <span>TTF</span>
             </label>
             <label className={styles.formatOption}>
@@ -87,6 +88,7 @@ export function ExportPanel() {
                 checked={formats.includes('otf')}
                 onChange={() => toggleFormat('otf')}
               />
+              <span className={styles.toggleSwitch} />
               <span>OTF</span>
             </label>
           </div>
@@ -99,6 +101,7 @@ export function ExportPanel() {
               checked={includeReadme}
               onChange={(e) => setIncludeReadme(e.target.checked)}
             />
+            <span className={styles.toggleSwitch} />
             <span>Include README.txt</span>
           </label>
         </div>

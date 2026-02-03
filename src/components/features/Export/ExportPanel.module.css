@@ -74,21 +74,7 @@
   gap: var(--spacing-md);
 }
 
-.formatOption {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  font-size: var(--font-size-body);
-  color: var(--text-secondary);
-  cursor: pointer;
-}
-
-.formatOption input {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
+.formatOption,
 .checkbox {
   display: flex;
   align-items: center;
@@ -96,12 +82,61 @@
   font-size: var(--font-size-body);
   color: var(--text-secondary);
   cursor: pointer;
+  user-select: none;
 }
 
+.formatOption input,
 .checkbox input {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSwitch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: 10px;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.toggleSwitch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.formatOption:hover .toggleSwitch,
+.checkbox:hover .toggleSwitch {
+  border-color: var(--border-hover);
+}
+
+.formatOption input:checked + .toggleSwitch,
+.checkbox input:checked + .toggleSwitch {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.formatOption input:checked + .toggleSwitch::after,
+.checkbox input:checked + .toggleSwitch::after {
+  left: 18px;
+  background: var(--text-primary);
+}
+
+.formatOption input:focus-visible + .toggleSwitch,
+.checkbox input:focus-visible + .toggleSwitch {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .progress {
