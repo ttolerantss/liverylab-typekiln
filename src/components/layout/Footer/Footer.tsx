@@ -26,10 +26,10 @@ export function Footer() {
         </div>
 
         <div className={styles.right}>
-          <a href="https://liverylab.cc/privacy-policy" className={styles.link}>
+          <a href="/privacy-policy" className={styles.link}>
             Privacy Policy
           </a>
-          <a href="https://liverylab.cc/terms-of-service" className={styles.link}>
+          <a href="/terms-of-service" className={styles.link}>
             Terms of Service
           </a>
         </div>

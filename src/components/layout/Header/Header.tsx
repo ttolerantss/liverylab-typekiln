@@ -15,7 +15,7 @@ export function Header() {
             </svg>
           </a>
 
-          <a href="#" className={styles.docButton}>
+          <a href="/introduction/getting-started" className={styles.docButton}>
             Documentation
           </a>
         </div>
