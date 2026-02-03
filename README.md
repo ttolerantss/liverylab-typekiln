@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# TypeKiln
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based font creation tool that converts SVG files into usable TTF and OTF font files. Everything runs in your browser - no server uploads, no account required.
 
-Currently, two official plugins are available:
+## What It Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TypeKiln takes your glyph designs (as SVG files) and packages them into a working font. Upload your character designs, map them to the right characters, adjust spacing and kerning, then export a ready-to-use font file.
 
-## React Compiler
+## How to Use
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Upload
 
-## Expanding the ESLint configuration
+Drag and drop your SVG files onto the upload area, or click to browse. Each SVG should contain one glyph (letter, number, or symbol).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Automatic character detection:** Name your files after the character they represent:
+- Simple characters: `A.svg`, `B.svg`, `1.svg`
+- Special characters: `period.svg`, `comma.svg`, `question.svg`, `ampersand.svg`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2. Mapping
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Review and adjust character assignments. Click any glyph to change which character it represents. The coverage panel shows which characters in the standard set are mapped and which are missing.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. Kerning
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Fine-tune the spacing between specific character pairs (like AV, To, or WA). Use **Auto-Kern** to generate initial values based on glyph shapes, then manually adjust any pairs that need attention.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 4. Preview
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+See how your font looks with real text. Adjust the preview size, colors, and spacing to test different scenarios.
+
+### 5. Metadata
+
+Set your font's name, version, author, and license information. The font family name is required for export.
+
+### 6. Export
+
+Generate your font files and download them as a ZIP package containing:
+- TTF (TrueType) font file
+- OTF (OpenType) font file
+- README with font information
+
+## SVG Preparation Tips
+
+For best results when creating your glyph SVGs:
+
+- **Expand strokes:** Convert all strokes to filled paths
+- **Flatten transforms:** Apply all rotations, scales, and translations
+- **Outline text:** Convert any text to paths
+- **Use a consistent artboard:** Same dimensions for all glyphs helps with alignment
+- **Keep it simple:** Avoid clipping masks, filters, or effects
+
+## Supported Characters
+
+TypeKiln supports the basic ASCII character set (95 characters):
+- Uppercase letters: A-Z
+- Lowercase letters: a-z
+- Numbers: 0-9
+- Punctuation and symbols: `!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~` and space
+
+## Privacy
+
+All processing happens locally in your browser. Your SVG files and generated fonts never leave your computer.
+
+---
+
+A [LiveryLab](https://liverylab.com) project
