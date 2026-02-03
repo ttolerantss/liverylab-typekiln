@@ -23,7 +23,7 @@ export function Header() {
         <div className={styles.right}>
           {/* GitHub Icon */}
           <a
-            href="https://github.com"
+            href="https://github.com/ttolerantss/liverylab-typekiln"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}
@@ -36,7 +36,7 @@ export function Header() {
 
           {/* Discord Icon */}
           <a
-            href="https://discord.com"
+            href="https://discord.gg/scDtJsxEKj"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.iconLink}

@@ -41,7 +41,7 @@ function App() {
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>TypeKiln</h1>
         <a
-          href="https://github.com"
+          href="https://github.com/ttolerantss/liverylab-typekiln"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.heroLink}
