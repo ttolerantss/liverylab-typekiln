@@ -7,7 +7,7 @@ export function Header() {
         <div className={styles.left}>
           {/* LiveryLab Logo */}
           <a href="/" className={styles.logoLink}>
-            <svg width="148" height="32" viewBox="0 0 147.91 31.88" fill="none" className={styles.logo}>
+            <svg width="120" height="26" viewBox="0 0 147.91 31.88" fill="none" className={styles.logo}>
               <path fill="#fff" d="M23.39,30.43c-.62.91-1.64,1.44-2.74,1.44H3.31c-1.09,0-2.11-.54-2.73-1.44-.62-.91-.75-2.05-.35-3.07l5.41-13.84c.28-.73.43-1.5.43-2.27V3.67c0-.24-.09-.47-.26-.65l-1.23-1.33c-.28-.29-.35-.71-.18-1.09.16-.37.52-.6.93-.6h13.32c.41,0,.76.23.93.6.16.38.09.79-.19,1.09l-1.23,1.33c-.16.18-.25.41-.25.65v7.57c0,.78.14,1.55.43,2.27l5.42,13.84c.4,1.02.27,2.17-.35,3.07Z"/>
               <text fill="#fff" fontFamily="Geist, sans-serif" fontSize="24" fontWeight="700" x="32.66" y="24.6">
                 <tspan>LiveryLab</tspan>
