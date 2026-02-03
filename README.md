@@ -63,4 +63,4 @@ All processing happens locally in your browser. Your SVG files and generated fon
 
 ---
 
-A [LiveryLab](https://liverylab.com) project
+A [LiveryLab](https://liverylab.cc) and [Daniel's Workshop](https://danielwork.shop) project
